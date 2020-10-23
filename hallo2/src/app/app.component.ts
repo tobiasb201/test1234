@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional } from '@angular/core';
 import { AngularFireDatabase, AngularFireDatabaseModule, snapshotChanges, AngularFireList } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
 import { Observable } from 'rxjs';
@@ -17,7 +17,7 @@ import { DatabaseReference } from '@angular/fire/database/interfaces';
 })
 export class AppComponent {
 
-  
+  @Optional()
   items: Observable<any[]>;
   allitems :any;
   objects:Question[] = [];
@@ -50,9 +50,8 @@ export class AppComponent {
     this.ref = db.list(this.dbpath);
     this.items = db.list('/Fragenkatalog/Fragen').valueChanges();  
     this.items.subscribe(items => {
-      this.allitems = items[0];
+      this.allitems = items;
       console.log(this.allitems);
-
       
     })
   }
@@ -73,7 +72,7 @@ export class AppComponent {
           var ref2 = firebase.database().ref("Antworten");
 
           ref2.once("value").then(function(snapshot) {
-          var b = snapshot.child('Antworten/'+localStorage.getItem('hans')).exists(); // true
+          var b = snapshot.child('/Fragenkatalog/Antworten/'+localStorage.getItem('hans')).exists(); // true
          /* 
           if(b==true){
             firebase.database().ref(('Fragenkatalog/Frage1/Frage/'+localStorage.getItem('hans')).set(new Question("5554","test"));
@@ -83,8 +82,14 @@ export class AppComponent {
           }*/
           if(b==false)
           {
-            const usersRef1=firebase.database().ref('Antworten/'+localStorage.getItem('hans'));
-            usersRef1.set(new Question("ja","nein"));
+            const usersRef1=firebase.database().ref('/Fragenkatalog/Antworten/'+localStorage.getItem('hans'));
+           
+           let x: Question={
+            Antwort0001:true,
+            Antwort0010:true,
+            Antwort0110a:false,
+           }
+           usersRef1.set(x);
             console.log("aha");
             //return this.ref.push(new Person("22","Herbert","Standfuß"));
           }
