@@ -1,4 +1,30 @@
-<button (click)="test3($event)">Klick mich</button>
-<button (click)="test5()">Klick mich</button>
+ <!--<div class="jumbotron text-center">
+        <div *ngFor="let ButtonBild of ButtonBilder">
+            <input type="button" name="dayOfTheWeek" value="{{ButtonBild}}">
+        </div>
+      </div>-->
+      <p>
+        <button id="button1" (click)="klick1()"><img src="/assets/icons/1000px-Logo_BILD.png" width="200px" height="100px"></button>
+        <button id="button2" (click)="klick2()">Bild1</button>
+      </p>
+      <!--<img src="assets/icons/1000px-Logo_BILD.png" witdh="100px" height="100px" id="bild1" (click)="klick(this)">
+      <img src="assets/icons/1000px-Logo_BILD.png" witdh="100px" height="100px" id="bild2" (click)="klick(this)">-->
+      <button (click)="bildpush()">Push</button>
+<br>
+  <div class="b-container">
+    <button (click)="test3($event)">Klick mich</button>
+    <button (click)="test8()">Klick mich</button>
+    {{ snap }}
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary">
+        <input type="radio" name="test" id="radiotest1" autocomplete="off" />
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="test" id="radiotest2" autocomplete="off" />
+      </label>
+      <button (click)="testradio()">RadioPush</button>
+      <br />
+      
+    </div>
 
-{{snapshot.name}}
+  </div>
