@@ -6,14 +6,14 @@ export const environment = {
   production: false,
   
   firebase : {
-  apiKey: "AIzaSyBbAsO7VpUl9ZbNVhR7N4a5UW4vMQpLB64",
-  authDomain: "alleare-adesso.firebaseapp.com",
-  databaseURL: "https://alleare-adesso.firebaseio.com",
-  projectId: "alleare-adesso",
-  storageBucket: "alleare-adesso.appspot.com",
-  messagingSenderId: "712768330757",
-  appId: "1:712768330757:web:89dce683420624f666106c",
-  measurementId: "G-E0DKNXC9Z6"
+    apiKey: "AIzaSyBWUFKxYcjgsImEx8AAUmBOX7OSx1Wg0Tk",
+    authDomain: "hshl20.firebaseapp.com",
+    databaseURL: "https://hshl20.firebaseio.com",
+    projectId: "hshl20",
+    storageBucket: "hshl20.appspot.com",
+    messagingSenderId: "781057794939",
+    appId: "1:781057794939:web:f2bf7bb2b423d045a453de",
+    measurementId: "G-8QG9PZE7B4"
 }
 };
 

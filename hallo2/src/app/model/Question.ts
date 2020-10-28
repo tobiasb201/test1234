@@ -3,21 +3,22 @@ import { Observable } from 'rxjs';
 
 
 export interface Question{
-    Antwort0001?:boolean | undefined;
-    Antwort0010?:boolean| undefined;
-    Antwort0011?:number| undefined;
-    Antwort0100?:number| undefined;
-    Antwort0101?:boolean| undefined;
-    Antwort0110a?:boolean| undefined;
-    Antwort0110b?:boolean| undefined;
-    Antwort0110c?:boolean| undefined;
-    Antwort0110d?:boolean | undefined;
-    Antwort0111?:number| undefined;
-    Antwort1000?:boolean| undefined;
-    Antwort1001?:boolean| undefined;
-    Antwort1010?:boolean| undefined;
-    Antwort1011?:number| undefined;
-    Antwort1100?:number| undefined;
-    Antwort1101?:Observable<any>| undefined;
+    Antwort0001?:boolean ;
+    Antwort0010?:boolean;
+    Antwort0011?:number;
+    Antwort0100?:number;
+    Antwort0101?:boolean;
+    Antwort0110a?:boolean;
+    Antwort0110b?:boolean;
+    Antwort0110c?:boolean;
+    Antwort0110d?:boolean;
+    Antwort0111?:number;
+    Antwort1000?:boolean;
+    Antwort1001?:boolean;
+    Antwort1010?:boolean;
+    Antwort1011?:number;
+    Antwort1100?:number;
+    Antwort1101?:Observable<any>;
+    Name?:string;
        
     }
